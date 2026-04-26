@@ -1,5 +1,5 @@
 public class Company {
-    static void main(String[] args) {
+    public static void main(String[] args) {
        
         Employee emp1 = new Employee("Abebe", 50000, "IT");
         Employee emp2 = new Employee("Sara", 60000, "HR");
