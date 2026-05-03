@@ -8,7 +8,7 @@ public class Manager extends Employee {
     double calculateBonus() {
         return super.calculateBonus() + bonusExtra;
     }
-    void showManager() {
+    public void showManager() {
         displayInfo();
         System.out.println("Extra Bonus: $" + bonusExtra);
     }

@@ -1,22 +1,25 @@
 public class Employee {
-    String name;
-    double salary;
-    String department;
+    protected String name;
+    protected int salary;
+    protected String department;
 
-    Employee(String name, double salary, String department) {
+    Employee(String name, int salary, String department) {
         this.name=name;
         this.salary=salary;
         this.department=department;
     }
-    void displayInfo() {
+    public void displayInfo() {
         System.out.println("Name: "+ name);
         System.out.println("Salary: $"+ salary);
         System.out.println("Department: "+ department);
     }
-    double calculateBonus() {
+    public double calculateBonus() {
         return salary * 0.05;
     }
-    String getDepartment() {
+   public String getDepartment() {
         return department;
+    }
+    final void companyPolicy() {
+        System.out.println("Follow company rules."); 
     }
 }
