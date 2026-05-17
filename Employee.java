@@ -1,6 +1,7 @@
-public class Employee {
-    protected String name;
-    protected int salary;
+package company;
+public abstract class Employee {
+    private String name;
+    private int salary;
     protected String department;
 
     Employee(String name, int salary, String department) {
@@ -8,18 +9,29 @@ public class Employee {
         this.salary=salary;
         this.department=department;
     }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name=name;
+    }
+    public int getSalary() {
+        return salary;
+    }
+    public void setSalary(int salary) {
+        this.salary=salary;
+    }
+    public String getDepartment() {
+        return department;
+    }
     public void displayInfo() {
         System.out.println("Name: "+ name);
         System.out.println("Salary: $"+ salary);
         System.out.println("Department: "+ department);
     }
-    public double calculateBonus() {
-        return salary * 0.05;
-    }
-   public String getDepartment() {
-        return department;
-    }
+    abstract double calculateBonus() ;
+
     final void companyPolicy() {
-        System.out.println("Follow company rules."); 
+        System.out.println("Employees should maintain professionalism and integrity."); 
     }
 }
